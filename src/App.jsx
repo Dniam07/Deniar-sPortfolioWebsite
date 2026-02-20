@@ -18,7 +18,7 @@ function App() {
           </div>
         </div>
       </nav>
-
+    <>  </>
       {/* Hero */}
       <section
         id="home"
