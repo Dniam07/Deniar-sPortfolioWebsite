@@ -22,18 +22,16 @@ function App() {
       {/* Hero */}
       <section
         id="home"
-        className="min-h-screen flex items-center bg-gradient-to-br from-blue-50 to-white pt-20"
+        className="min-h-screen flex items-center bg-gradient-to-br from-blue-50 to-white pt-24"
       >
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-
-          {/* Text */}
           <div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
               Hello, I'm <span className="text-blue-500">Deniar</span>
             </h2>
-            <p className="text-lg text-gray-600 mb-6">
+            <p className="text-lg text-gray-600 mb-8">
               A Web Developer focused on building modern, scalable, and maintainable applications,
-              with experience across frontend and backend development.
+              with hands-on experience across both frontend and backend development.
             </p>
 
             <div className="flex gap-4">
@@ -52,12 +50,11 @@ function App() {
             </div>
           </div>
 
-          {/* Visual */}
           <div className="flex justify-center md:justify-end">
             <div className="w-72 h-72 rounded-full bg-blue-100 flex items-center justify-center">
               <img
                 src={profileimage}
-                alt="Profile"
+                alt="Deniar Profile"
                 className="w-64 h-64 rounded-full object-cover"
               />
             </div>
@@ -70,26 +67,29 @@ function App() {
         <h3 className="text-3xl font-bold mb-6">About Me</h3>
         <p className="text-gray-600 leading-relaxed mb-4">
           I am a web developer with a strong interest in modern web technologies.
-          My primaryly focus on backend development using Golang, Laravel, and Python (FastApi),but I also have experience with frontend development using React and Tailwind CSS.
+          My primary focus is backend development using Golang, Laravel, and Python (FastAPI),
+          while also having solid experience in frontend development with React and Tailwind CSS.
         </p>
         <p className="text-gray-600 leading-relaxed">
-          I am currently expanding my knowledge in Machine learning, particularly for applications that require data analysis and predictive modeling. I am passionate about building efficient, scalable, and maintainable applications that solve real-world problems.
+          I am currently expanding my knowledge in Machine Learning, particularly in areas related
+          to data analysis and predictive modeling. I am passionate about building efficient,
+          scalable, and maintainable systems that solve real-world problems.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 text-sm">
           {[
             "React",
-            "Bootstrap CSS",
             "Tailwind CSS",
-            "Go/Golang",
-            "MySQL",
-            "Phalcon Framework",
+            "Bootstrap",
+            "Golang",
             "Laravel",
+            "Phalcon",
             "Python",
-            "FastApi",
+            "FastAPI",
+            "MySQL",
+            "RESTful API",
             "Machine Learning",
             "Git",
-            "Restful API",
           ].map(skill => (
             <div
               key={skill}
@@ -106,66 +106,54 @@ function App() {
         <div className="max-w-6xl mx-auto px-6">
           <h3 className="text-3xl font-bold mb-12">Projects</h3>
 
-          {/* Carousel Container */}
-          <div
-            className="
-        flex flex-col gap-8
-        md:flex-row md:gap-6
-        md:overflow-x-auto md:pb-4
-        scroll-smooth
-      "
-          >
+          <div className="
+            flex flex-col gap-8
+            md:flex-row md:gap-6
+            md:overflow-x-auto md:pb-4
+            scroll-smooth
+          ">
             {[
               {
                 image: hadirApp,
                 title: "Attendance Management Application",
-                desc: "A web-based attendance management system that enables employee check-in/check-out, attendance tracking, and role-based access for administrators and staff.",
+                desc: "A web-based attendance management system enabling employee check-in/check-out, attendance tracking, and role-based access for administrators and staff.",
                 url: "https://www.hadirapp.my.id/",
               },
               {
                 image: hainick,
                 title: "Hainick – Talent & Creator Management Website",
-                desc: "A modern and responsive company profile website built to support a talent and creator management agency, focusing on clean UI and strong brand presentation.",
+                desc: "A modern and responsive company profile website designed to support a talent and creator management agency, emphasizing clear information structure and strong brand identity.",
                 url: "https://hainickreatif.com/",
               },
               {
                 image: onebox,
-                title: "OneBox – Prospect and Sales Management Module",
-                desc: "Contributed to the development of the Prospect and Sales Management module, featuring kanban boards and calendar views to improve sales workflow efficiency.",
+                title: "OneBox – Prospect & Sales Management Module",
+                desc: "Contributed to the development of prospect and sales management modules, featuring kanban boards and calendar views to improve sales workflow efficiency.",
                 url: "https://onebox.co.id/",
               },
               {
                 image: simpus,
-                title: "Simpus – Medical Record Management System Microservice",
-                desc: "Contributed to the development of the Medical Record Management System Microservice, featuring secure data handling and integration with existing hospital systems.",
+                title: "SIMPUS – Medical Record Management Microservice",
+                desc: "Contributed to the development of a medical record management microservice, focusing on secure data handling and system integration.",
                 url: "https://ciptalife.id/",
               },
-              {
-                image: "https://placehold.co/600x400",
-                title: "Cration Clouds – Content Creator Management System",
-                desc: "Contributed to the development of the Content Creator Management System, featuring a dashboard for managing content creators and their performance metrics.",
-                url: "#",
-              },
-
             ].map((project, index) => (
               <div
                 key={index}
                 className="
-            bg-white rounded-xl shadow hover:shadow-lg transition
-            overflow-hidden
-            md:min-w-[320px] md:max-w-[320px]
-            flex-shrink-0
-          "
+                  bg-white rounded-xl shadow
+                  hover:shadow-xl hover:-translate-y-1 transition
+                  overflow-hidden
+                  md:min-w-[320px] md:max-w-[320px]
+                  flex-shrink-0
+                "
               >
-                {/* Image */}
-                {project.image && (
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-48 object-cover"
-                  />
-                )}
-                {/* Content */}
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-48 object-cover"
+                />
+
                 <div className="p-6">
                   <h4 className="font-bold text-xl mb-2">
                     {project.title}
@@ -194,18 +182,14 @@ function App() {
 
         <p className="text-gray-600 mb-10 leading-relaxed">
           I am open to professional opportunities, collaborations, and project-based work.
-          If you are interested in working together or would like to discuss potential opportunities,
-          please feel free to contact me through the channels below.
+          If you would like to discuss potential opportunities or collaborations,
+          please feel free to reach out.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4">
           <a
             href="mailto:nerdiecorporation@gmail.com"
-            className="
-        bg-blue-500 text-white px-6 py-3 rounded
-        text-center font-medium
-        hover:bg-blue-600 transition
-      "
+            className="bg-blue-500 text-white px-6 py-3 rounded text-center font-medium hover:bg-blue-600 transition"
           >
             Email Me
           </a>
@@ -214,11 +198,7 @@ function App() {
             href="https://www.linkedin.com/in/deniarauniam"
             target="_blank"
             rel="noopener noreferrer"
-            className="
-        border border-gray-300 px-6 py-3 rounded
-        text-center font-medium text-gray-700
-        hover:bg-gray-100 transition
-      "
+            className="border border-gray-300 px-6 py-3 rounded text-center font-medium text-gray-700 hover:bg-gray-100 transition"
           >
             LinkedIn Profile
           </a>
