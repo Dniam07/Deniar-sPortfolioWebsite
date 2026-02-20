@@ -1,9 +1,3 @@
-import profileimage from './assets/images/imgdeniar.jpg'
-import hadirApp from './assets/images/projectimg/hadirapp.png'
-import hainick from './assets/images/projectimg/hainick.png'
-import onebox from './assets/images/projectimg/onebox.png'
-import simpus from './assets/images/projectimg/simpus.png'
-
 function App() {
   return (
     <div className="font-sans text-gray-800 scroll-smooth">
@@ -18,7 +12,7 @@ function App() {
           </div>
         </div>
       </nav>
-    <>  </>
+      <>  </>
       {/* Hero */}
       <section
         id="home"
@@ -53,7 +47,7 @@ function App() {
           <div className="flex justify-center md:justify-end">
             <div className="w-72 h-72 rounded-full bg-blue-100 flex items-center justify-center">
               <img
-                src={profileimage}
+                src="/images/imgdeniar.jpg"
                 alt="Deniar Profile"
                 className="w-64 h-64 rounded-full object-cover"
               />
@@ -114,39 +108,45 @@ function App() {
           ">
             {[
               {
-                image: hadirApp,
+                image: "/images/project/hadirapp.png",
                 title: "Attendance Management Application",
                 desc: "A web-based attendance management system enabling employee check-in/check-out, attendance tracking, and role-based access for administrators and staff.",
                 url: "https://www.hadirapp.my.id/",
               },
               {
-                image: hainick,
+                image: "/images/project/hainick.png",
                 title: "Hainick – Talent & Creator Management Website",
-                desc: "A modern and responsive company profile website designed to support a talent and creator management agency, emphasizing clear information structure and strong brand identity.",
+                desc: "A corporate website for a talent and creator management agency, designed to clearly present services, vision, and brand identity with a modern and professional interface.",
                 url: "https://hainickreatif.com/",
               },
               {
-                image: onebox,
+                image: "/images/project/onebox.png",
                 title: "OneBox – Prospect & Sales Management Module",
-                desc: "Contributed to the development of prospect and sales management modules, featuring kanban boards and calendar views to improve sales workflow efficiency.",
+                desc: "Contributed to the development of prospect and sales management modules, including kanban boards and calendar views to improve sales workflow efficiency.",
                 url: "https://onebox.co.id/",
               },
               {
-                image: simpus,
+                image: "/images/project/simpus.png",
                 title: "SIMPUS – Medical Record Management Microservice",
                 desc: "Contributed to the development of a medical record management microservice, focusing on secure data handling and system integration.",
                 url: "https://ciptalife.id/",
+              },
+              {
+                image: "https://placehold.co/600x400",
+                title: "Creation Clouds – Creator Management Platform",
+                desc: "A content creator management platform designed to manage creators, monitor performance metrics, and streamline collaboration workflows between creators and brands.",
+                url: "#",
               },
             ].map((project, index) => (
               <div
                 key={index}
                 className="
-                  bg-white rounded-xl shadow
-                  hover:shadow-xl hover:-translate-y-1 transition
-                  overflow-hidden
-                  md:min-w-[320px] md:max-w-[320px]
-                  flex-shrink-0
-                "
+      bg-white rounded-xl shadow
+      hover:shadow-xl hover:-translate-y-1 transition
+      overflow-hidden
+      md:min-w-[320px] md:max-w-[320px]
+      flex-shrink-0
+    "
               >
                 <img
                   src={project.image}
@@ -155,9 +155,7 @@ function App() {
                 />
 
                 <div className="p-6">
-                  <h4 className="font-bold text-xl mb-2">
-                    {project.title}
-                  </h4>
+                  <h4 className="font-bold text-xl mb-2">{project.title}</h4>
                   <p className="text-gray-600 mb-4 text-sm leading-relaxed">
                     {project.desc}
                   </p>
